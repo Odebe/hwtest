@@ -1,0 +1,6 @@
+# config/sidekiq.yml
+
+:schedule:
+  periodic:
+    every: '1s'
+    class: Periodic
