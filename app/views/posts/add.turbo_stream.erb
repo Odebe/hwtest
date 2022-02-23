@@ -1,0 +1,5 @@
+<%= turbo_stream.append 'timers' do %>
+  <%= render partial: 'shared/timer', locals: { time: Time.now } %>
+<% end %>
+
+<%= render partial: 'shared/streams/update_last_action' %>

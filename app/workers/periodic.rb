@@ -3,6 +3,6 @@ class Periodic
   include Turbo::FramesHelper
 
   def perform
-    Turbo::StreamsChannel.broadcast_replace_to 'time_stream', target: "current_time", partial: 'shared/current_time', locals: { time: Time.now }
+    Turbo::StreamsChannel.broadcast_replace_to 'time_stream', target: "current_time", partial: 'shared/frames/current_time', locals: { time: Time.now }
   end
 end

@@ -1,2 +1,17 @@
 <%= turbo_stream_from 'time_stream' %>
-<%= render partial: 'shared/current_time', locals: { time: Time.now } %>
+<%= render partial: 'shared/frames/current_time', locals: { time: Time.now } %>
+
+<div>
+  <p>
+    <%= button_to 'Add', posts_add_path %>
+    <%= link_to 'Clear', posts_clear_path, data: { 'turbo-method' => :post } %>
+  </p>
+
+  <p>
+    <%= render partial: 'shared/frames/last_action' %>
+  </p>
+
+  <ol>
+    <%= render partial: 'shared/frames/timers' %>
+  </ol>
+</div>
