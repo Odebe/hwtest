@@ -1,5 +1,3 @@
-<%= turbo_stream.replace 'last_action' do %>
-  <%= render layout: 'shared/frames/last_action' do %>
-    <%= request.env['PATH_INFO'] %>
-  <% end %>
+<%= turbo_stream.update 'last_action' do %>
+  <%= request.env['PATH_INFO'] %>
 <% end %>
